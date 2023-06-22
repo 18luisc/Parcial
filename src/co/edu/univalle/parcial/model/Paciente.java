@@ -12,10 +12,10 @@ public class Paciente {
     private int id;
     private String apellido;
     private String nombre;
-    private int telefono;
+    private String telefono;
     private String direccion;
 
-    public Paciente(int id, String apellido, String nombre, int telefono, String direccion) {
+    public Paciente(int id, String apellido, String nombre, String telefono, String direccion) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
@@ -47,11 +47,11 @@ public class Paciente {
         this.nombre = nombre;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -63,4 +63,8 @@ public class Paciente {
         this.direccion = direccion;
     }
         
+    @Override
+    public String toString() {
+        return id + ", " + apellido +", "+ nombre + ", " + telefono + ", " + direccion;
+    }
 }

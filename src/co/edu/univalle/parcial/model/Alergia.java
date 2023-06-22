@@ -9,5 +9,19 @@ package co.edu.univalle.parcial.model;
  * @author User
  */
 public class Alergia {
+    private String nombre;
+
+    public Alergia(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
     
 }
