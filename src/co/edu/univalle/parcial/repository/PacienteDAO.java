@@ -11,12 +11,12 @@ import java.util.Map;
  *
  * @author User
  */
-public class PacienteDAO {
-   /* implements PacienteDAOInterface
-    Map<Integer,Paciente> mapaPacientes= new HashMap<>();
+public class PacienteDAO implements PacienteDAOInterface{
+   
+    private Map<String,Paciente> mapaPacientes= new HashMap<>();
 
     @Override
-    public Map<Integer, Paciente> getPacientes() {
+    public Map<String, Paciente> getPacientes() {
         return mapaPacientes;
     }
 
@@ -41,5 +41,5 @@ public class PacienteDAO {
     public boolean deletePaciente(int id) {
         mapaPacientes.remove(id);
         return true;
-    }*/
+    }
 }

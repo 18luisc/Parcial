@@ -10,4 +10,9 @@ package co.edu.univalle.parcial.repository;
  */
 public class AlergiaDAOInterface {
     
+    public Map<Integer, Alergia> getAlergias();
+    
+    public Alergia getAlergia(String nombre);
+    
+    public boolean addAlergia(Alergia alergia);
 }

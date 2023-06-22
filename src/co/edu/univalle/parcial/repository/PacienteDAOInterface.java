@@ -11,7 +11,7 @@ import java.util.Map;
  * @author User
  */
 public class PacienteDAOInterface {
-    /*
+    
     public Map<Integer, Paciente> getPacientes();
     
     public Paciente getPaciente(int id);
@@ -21,5 +21,5 @@ public class PacienteDAOInterface {
     public boolean updatePaciente(int id, Paciente paciente);
     
     public boolean deletePaciente(int id);
-    */
+    
 }
