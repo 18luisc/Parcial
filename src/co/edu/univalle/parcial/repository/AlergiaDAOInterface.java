@@ -4,6 +4,9 @@
  */
 package co.edu.univalle.parcial.repository;
 
+import co.edu.univalle.parcial.model.Alergia;
+import java.util.Map;
+
 /**
  *
  * @author User
