@@ -4,6 +4,12 @@
  */
 package co.edu.univalle.parcial.vista;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  *
  * @author User
@@ -42,7 +48,7 @@ public class GestionDePacientes extends javax.swing.JFrame {
         btnAgregar = new javax.swing.JButton();
         jComboAlergias = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListAlergias = new javax.swing.JList<>();
         jpDatosPersonales2 = new javax.swing.JPanel();
         btnGrabar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
@@ -139,14 +145,28 @@ public class GestionDePacientes extends javax.swing.JFrame {
 
         btnAgregar.setText("Agregar");
 
-        jComboAlergias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+        jComboAlergias.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                jComboAlergiasPopupMenuWillBecomeInvisible(evt);
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+                jComboAlergiasPopupMenuWillBecomeVisible(evt);
+            }
         });
-        jScrollPane1.setViewportView(jList1);
+        jComboAlergias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboAlergiasMouseClicked(evt);
+            }
+        });
+        jComboAlergias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboAlergiasActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(jListAlergias);
 
         javax.swing.GroupLayout jpDatosPersonales1Layout = new javax.swing.GroupLayout(jpDatosPersonales1);
         jpDatosPersonales1.setLayout(jpDatosPersonales1Layout);
@@ -272,6 +292,22 @@ public class GestionDePacientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDireccionActionPerformed
 
+    private void jComboAlergiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboAlergiasActionPerformed
+        
+    }//GEN-LAST:event_jComboAlergiasActionPerformed
+
+    private void jComboAlergiasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboAlergiasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboAlergiasMouseClicked
+
+    private void jComboAlergiasPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboAlergiasPopupMenuWillBecomeVisible
+        
+    }//GEN-LAST:event_jComboAlergiasPopupMenuWillBecomeVisible
+
+    private void jComboAlergiasPopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboAlergiasPopupMenuWillBecomeInvisible
+       
+    }//GEN-LAST:event_jComboAlergiasPopupMenuWillBecomeInvisible
+
     /**
      * @param args the command line arguments
      */
@@ -314,7 +350,7 @@ public class GestionDePacientes extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGrabar;
     private javax.swing.JComboBox<String> jComboAlergias;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jListAlergias;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpDatosPersonales;
     private javax.swing.JPanel jpDatosPersonales1;
