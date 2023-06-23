@@ -1,5 +1,5 @@
-12345, Orrego, Sebastian, 312878, Carrera 5
-56789, Orrego, Sebastian, 312878, Carrera 6
-01234, Orrego, Sebastian, 312878, Carrera 7
-34567, Orrego, Sebastian, 312878, Carrera 8
-23456, Orrego, Sebastian, 312878, Carrera 9
+12345, Orrego, Sebastian, 312878, Carrera 5, polen
+56789, Orrego, Sebastian, 312878, Carrera 6, abejas
+01234, Orrego, Sebastian, 312878, Carrera 7, penicilina
+34567, Orrego, Sebastian, 312878, Carrera 8, mariscos
+23456, Orrego, Sebastian, 312878, Carrera 9, acaros

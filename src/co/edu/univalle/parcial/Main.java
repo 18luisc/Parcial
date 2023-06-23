@@ -10,18 +10,12 @@ package co.edu.univalle.parcial;
  */
 import co.edu.univalle.parcial.controller.GestionDePacientesController;
 import co.edu.univalle.parcial.vista.GestionDePacientes;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class Main {
     public static void main(String[] args) {
         GestionDePacientes gestionDePacientes = new GestionDePacientes();
         gestionDePacientes.setVisible(true);
-      /*  try {
-            GestionDePacientesController gestionDePacientesController = new GestionDePacientesController(gestionDePacientes);
-        } catch (IOException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        //GestionDePacientesController gestionDePacientes = new GestionDePacientesController(gestionDePacientes);
     }
 }

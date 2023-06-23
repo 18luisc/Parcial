@@ -4,11 +4,13 @@
  */
 package co.edu.univalle.parcial.vista;
 
+import co.edu.univalle.parcial.controller.GestionDePacientesController;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -21,6 +23,24 @@ public class GestionDePacientes extends javax.swing.JFrame {
      */
     public GestionDePacientes() {
         initComponents();
+        
+        File archivo = new File("alergias.txt");
+    try {
+        FileReader fr = new FileReader(archivo);
+        BufferedReader br = new BufferedReader(fr);
+
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            jComboAlergias.addItem(linea);
+        }
+
+        br.close();
+        fr.close();
+    } catch (FileNotFoundException e) {
+        System.out.println("El archivo especificado no existe.");
+    } catch (IOException e) {
+        System.out.println("Ocurrió un error al leer el archivo.");
+    }
     }
 
     /**
@@ -294,6 +314,7 @@ public class GestionDePacientes extends javax.swing.JFrame {
 
     private void jComboAlergiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboAlergiasActionPerformed
         
+        
     }//GEN-LAST:event_jComboAlergiasActionPerformed
 
     private void jComboAlergiasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboAlergiasMouseClicked
@@ -342,6 +363,10 @@ public class GestionDePacientes extends javax.swing.JFrame {
             }
         });
     }
+    
+    public JComboBox<String> getjComboBoxAlergias() {
+        return jComboAlergias;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
@@ -349,7 +374,7 @@ public class GestionDePacientes extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGrabar;
-    private javax.swing.JComboBox<String> jComboAlergias;
+    public javax.swing.JComboBox<String> jComboAlergias;
     private javax.swing.JList<String> jListAlergias;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpDatosPersonales;

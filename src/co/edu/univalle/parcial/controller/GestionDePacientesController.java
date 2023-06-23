@@ -10,7 +10,10 @@ import co.edu.univalle.parcial.repository.AlergiaDAO;
 import co.edu.univalle.parcial.repository.PacienteDAO;
 import co.edu.univalle.parcial.vista.GestionDePacientes;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -20,27 +23,41 @@ import javax.swing.DefaultComboBoxModel;
 public class GestionDePacientesController {
     
     private GestionDePacientes gestionDePacientes;
-    private PacienteDAO pacienteDAO;
-    private AlergiaDAO alergiaDAO;
-    
-    public GestionDePacientesController(GestionDePacientes vista, PacienteDAO pacienteDao, AlergiaDAO alergiaDao) {
-        this.gestionDePacientes = vista;
-        this.pacienteDAO = pacienteDao;
-        this.alergiaDAO = alergiaDao;
-        
-        HandlerActions listener = new HandlerActions();
-        
-        //gestionDePacientes.addjComboAlergias(listener);
-       
-        
+    //private PacienteDAO pacienteDAO;
+    //private AlergiaDAO alergiaDAO;
+
+    public GestionDePacientesController(GestionDePacientes gestionDePacientes) {
+        this.gestionDePacientes = gestionDePacientes;
     }
+
     
-       
+    
+    
+   /* public void init() {
+        GestionDePacientes gestionDePacientes = new GestionDePacientes();
+        cargarAlergias(gestionDePacientes);
+    }
 
-    private static class HandlerActions {
+    
+    public void cargarAlergias(GestionDePacientes gestionDePacientes) {
+    File archivo = new File("alergias.txt");
+    try {
+        FileReader fr = new FileReader(archivo);
+        BufferedReader br = new BufferedReader(fr);
 
-        public HandlerActions() {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            gestionDePacientes.jComboAlergias.addItem(linea);
         }
+
+        br.close();
+        fr.close();
+    } catch (FileNotFoundException e) {
+        System.out.println("El archivo especificado no existe.");
+    } catch (IOException e) {
+        System.out.println("Ocurrió un error al leer el archivo.");
     }
+  }*/
+    
 }
 
