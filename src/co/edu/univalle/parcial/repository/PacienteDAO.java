@@ -21,24 +21,24 @@ public class PacienteDAO implements PacienteDAOInterface{
     }
 
     @Override
-    public Paciente getPaciente(int id) {
+    public Paciente getPaciente(String id) {
         return mapaPacientes.get(id);
     }
 
     @Override
     public boolean addPaciente(Paciente paciente) {
-        mapaPacientes.put(paciente.getId(),paciente);
+        mapaPacientes.put(paciente.getId(), paciente);
         return true;
     }
 
     @Override
-    public boolean updatePaciente(int id, Paciente paciente) {
+    public boolean updatePaciente(String id, Paciente paciente) {
         mapaPacientes.put(id, paciente);
         return true;
     }
 
     @Override
-    public boolean deletePaciente(int id) {
+    public boolean deletePaciente(String id) {
         mapaPacientes.remove(id);
         return true;
     }

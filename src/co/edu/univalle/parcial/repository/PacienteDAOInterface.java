@@ -10,16 +10,16 @@ import java.util.Map;
  *
  * @author User
  */
-public class PacienteDAOInterface {
+public interface PacienteDAOInterface {
     
-    public Map<Integer, Paciente> getPacientes();
+    public Map<String, Paciente> getPacientes();
     
-    public Paciente getPaciente(int id);
+    public Paciente getPaciente(String id);
     
     public boolean addPaciente(Paciente paciente);
     
-    public boolean updatePaciente(int id, Paciente paciente);
+    public boolean updatePaciente(String id, Paciente paciente);
     
-    public boolean deletePaciente(int id);
+    public boolean deletePaciente(String id);
     
 }

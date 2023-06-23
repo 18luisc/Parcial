@@ -30,7 +30,7 @@ public class GestionDePacientesController {
         
         HandlerActions listener = new HandlerActions();
         
-        gestionDePacientes.addjComboAlergias(listener);
+        //gestionDePacientes.addjComboAlergias(listener);
        
         
     }

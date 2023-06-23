@@ -11,9 +11,9 @@ import java.util.Map;
  *
  * @author User
  */
-public class AlergiaDAOInterface {
+public interface AlergiaDAOInterface {
     
-    public Map<Integer, Alergia> getAlergias();
+    public Map<String, Alergia> getAlergias();
     
     public Alergia getAlergia(String nombre);
     

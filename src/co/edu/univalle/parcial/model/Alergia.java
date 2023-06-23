@@ -23,5 +23,8 @@ public class Alergia {
         this.nombre = nombre;
     }
     
-    
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }

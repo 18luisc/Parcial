@@ -14,10 +14,10 @@ import java.util.Map;
  */
 public class AlergiaDAO implements AlergiaDAOInterface {
     
-    private Map<Integer, Alergia> mapaAlergias = new HashMap<>();    
+    private Map<String, Alergia> mapaAlergias = new HashMap<>();    
 
     @Override
-    public Map<Integer, Alergia> getAlergias() {
+    public Map<String, Alergia> getAlergias() {
         return mapaAlergias;
     }
 

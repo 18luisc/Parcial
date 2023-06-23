@@ -4,30 +4,35 @@
  */
 package co.edu.univalle.parcial.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author User
  */
 public class Paciente {
-    private int id;
+    private String id;
     private String apellido;
     private String nombre;
     private String telefono;
     private String direccion;
+    private List<Alergia> alergias;
 
-    public Paciente(int id, String apellido, String nombre, String telefono, String direccion) {
+    public Paciente(String id, String apellido, String nombre, String telefono, String direccion) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.alergias = new ArrayList();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -62,9 +67,17 @@ public class Paciente {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-        
-    @Override
+
+    public List<Alergia> getAlergias() {
+        return alergias;
+    }
+
+    public void setAlergias(List<Alergia> alergias) {
+        this.alergias = alergias;
+    }
+    
+   /* @Override
     public String toString() {
         return id + ", " + apellido +", "+ nombre + ", " + telefono + ", " + direccion;
-    }
+    }*/
 }
